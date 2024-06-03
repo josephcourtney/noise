@@ -1,0 +1,26 @@
+
+[build-system]
+requires = ["hatch", "hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "noise"
+version = "0.0.1"
+description = "colored noise"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Joseph M Courtney", email = "joseph.m.courtney@gmail.com" },
+]
+maintainers = [
+    { name = "Joseph M Courtney", email = "joseph.m.courtney@gmail.com" },
+]
+dependencies = [
+  "numpy",
+  "sounddevice",
+  "scipy",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+noise = "noise.core:main"
